@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add</title>
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/app1.css">
+    <script type="text/javascript"  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+<body>
+<% include header %>
+
+<div class="container">
+	<div class="jumbotron">
+		<h1> update a new campground </h1>
+<form role="form" action="/updated" method="POST">
+  <div class="form-group">
+    <label for="exampleInputname1">name</label>
+    <input type="text" class="form-control" name="name" placeholder="Enter name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">image</label>
+    <input type="text" class="form-control" name="image" placeholder="Enter image">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputlink1">description</label>
+    <input type="textarea" class="form-control" name="description" placeholder="Enter description">
+  </div>
+  <button type="submit" class="btn btn-success">update schema</button>
+</form><br>
+
+   </div>
+  </div>
+
+<% include footer %>
+</body>
+</html>

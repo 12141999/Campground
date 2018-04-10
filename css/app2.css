@@ -1,0 +1,27 @@
+#content {
+   text-align: center;
+   padding-top: 10%;
+}
+
+h1 {
+	font-size: 5em;
+	font-weight: 300px;
+}
+
+.mid {
+	text-align: center;
+}
+
+#comments {
+	border-radius: 5px solid black;
+}
+
+#i
+  {
+ width: 18%;
+  }
+
+/*.campground-size {
+	display: flex;
+	overflow: hidden;
+}*/

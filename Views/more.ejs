@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>home</title>
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/app2.css">
+    <script type="text/javascript"  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.jqu .?ery.com/jquery-3.3.1.slim.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  
+  <style type="text/css">
+  #i
+  {
+ width: 18%;
+  }
+  </style>
+</head>
+<body>
+
+<% include header %>
+   
+   <div class="container">
+   	<div class="jumbotron">
+   		<div class="mid">
+   			<center><h1>this is your campground</h1></center><br>
+             <center><strong><%= campground.name %></strong></center>
+		         <center><img src = '<%= campground.image %>'></center>
+           
+		         <center><%= campground.description %></center><br>
+
+           <div id="comments">  
+
+               <% campground.comments.forEach(function(comment){ %>
+            <strong>
+            <center><%= comment.author %></strong> - <%= comment.text %></center>
+            <% }); %>
+            </div><br>
+
+            <form action="/campground/<%=campground._id%>/comments/new">
+            <center><button id="i" class="btn btn-success">add comment</button></center>
+            </form>
+
+            <form action="/delete" method="GET">
+            <center><button id="i" class="btn btn-danger ">delete</button></center>
+            </form>
+
+            <form action="/update" method="GET">
+            <center><button id="i" class="btn btn-info "> Edit </button></center>
+            </form>
+ 
+            
+
+   		</div>
+   	</div>
+</div>
+
+<% include footer %>

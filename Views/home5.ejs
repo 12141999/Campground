@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/app2.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script type="text/javascript"  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+<body>
+
+<% include header %>
+
+<div class="container">
+	<header class="jumbotron">
+		<div id="content">
+	     	<h1> campground </h1>
+		    <h3>the themes of best places ever</h3>
+	    </div>
+	</header>
+</div>
+
+<div class="container">
+	<div class="jumbotron">
+		<div class="row text-center" style="display : flex; flexwrap : wrap;">
+			
+				    
+				    
+				    		<% p.forEach(function(k){ %>
+		    	       
+		    	       <div class="col-lg-4  col-md-6  col-sm-12">
+		    	       <div class = "img-responsive" >
+		               <img src = '<%= k.image %>' style="width:100%; height:100%;">
+		               </div>
+		               <div class = "caption">
+		               <strong><%= k.name %></strong><br>
+		                <button onclick="window.location.href='/campground/<%=k._id%>'" class="btn btn-primary">more</button>
+		               </div>
+		               </div>
+		               
+	                   <% }); %>
+				    	
+				    
+		    	       
+		</div>
+	</div>
+</div>
+
+
+
+<% include footer %>
